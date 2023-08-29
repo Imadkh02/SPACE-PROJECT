@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Space+Grotesk&family=Trispace:wght@600&display=swap');
+
+
+h1{
+  font-family: 'Bagel Fat One', cursive;
+}
+span, p{
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.srcl span{
+  font-family: 'Trispace', sans-serif;
+}
+ span{
+  font-family: 'Trispace', sans-serif;
+}
+
+
+
+.logo{
+    margin: 2rem;
+  }
+  
+  .flex{
+    display: flex;
+    gap: var(--gap, 1rem);
+  }
+  .primary-header{
+    align-items: center;
+    justify-content: space-between;
+   
+  }
+  .primary-nav{
+    background: hsl(0 0% 0% / 0.75);
+  }
+  .Mobile-nav-toggle{
+    display: none;
+  }
+  .primary-nav a{
+    font-family: sans-serif;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    padding-bottom: 30px;
+  }
+  .primary-nav a:hover {
+    padding-bottom: 30px;
+  /* background-color: rgba(185, 185, 185, 0.045);  */
+    border-bottom: solid 3px;
+    border-radius: 5px 5px 0px 0px;
+    transition: all 100ms ease-in-out;
+   }
+  
+  .primary-nav a > [aria-hidden="true"] {
+    font-weight: 700;
+    margin-inline-end: 0.75em;
+  }
+  .primary-nav a[aria-selected="true"]{
+    padding-bottom: 30px;
+    border-bottom: solid 3px;
+    border-radius: 5px 5px 0px 0px;
+    transition: all 100ms ease-in-out;
+  } 
+  
+  
+  @media screen and (max-width: 768px) {
+   .primary-nav{
+    --gap: 2.5em;
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+    padding: 10rem 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+   }
+   .primary-nav[data-visible="true"]{
+    transform: translateX(0%);
+   }
+   .primary-nav a:hover {
+   border: none;
+    
+   }
+   .Mobile-nav-toggle{
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background: url(assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    width: 2rem;
+    border: 0;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+   }
+   .Mobile-nav-toggle[aria-expanded="true"]{
+    background: url(assets/shared/icon-close.svg);
+    background-repeat: no-repeat;
+   }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+   .primary-nav a > span[aria-hidden="true"] {
+      display: none;
+   }
+   
+   .primary-nav{
+    --gap: clamp(1.5rem, 5vw, 3rem);
+    padding-block: 2rem;
+    padding-inline: clamp(3rem, 10vw, 10rem);
+  }
+  
+  
+  }
+  @media screen and (min-width: 1025px) {
+  .primary-nav{
+    --gap: clamp(1.5rem, 5vw, 3rem);
+    padding-block: 2rem;
+    padding-inline: clamp(3rem, 10vw, 5rem);
+  }
+  .shorte-line{
+    border: solid 1px white;
+    min-width: 28rem;
+    position: absolute;
+    left: 120px;
+    z-index: 1000;
+    opacity: 10%;
+  }
+  
+  }
+  
+  
+  
+  @supports ( backdrop-filter: blur(1rem)){
+    .primary-nav{
+      background: hsl(0 0% 100% / 0.1);
+      backdrop-filter: blur(1rem);
+    }
+  }
+  
+  

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+  name="description"
+  content="The Moon is Earth's only natural satellite. It is the fifth largest">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/shared/social.png">
+  <link rel="stylesheet" href="Destination.css">
+  <link rel="stylesheet" href="navar.css">
+  <link rel="stylesheet" href="footer.css">
+
+  <script src="javascript/script-nav.js" defer></script>
+  <script src="javascript/destiation.js" defer></script>
+
+  <title>DESTINATION | Space tourism website</title>
+  <style>
+
+  </style>
+</head>
+<body>
+<header class="primary-header flex">
+  <div>
+    <a href="index.html"><img src="assets/shared/logo.svg" alt="logo" class="logo"></a>
+  </div>
+<button class="Mobile-nav-toggle" aria-controls="primary-nav" aria-expanded="false"><span  class="sr-only"></span></button>
+<hr class="shorte-line">
+  <nav>
+    <ul id="primary-nav" data-visible="false" class="primary-nav flex" >
+     <li  class="active"><a  class="ff-sans-cond uppercase text-white letter-spacing-2"  href="index.html"><span aria-hidden="true">00</span>Home</a></li>
+     <li class="active"><a aria-selected="true" class="ff-sans-cond uppercase text-white letter-spacing-2"  href="Destination.html"><span aria-hidden="true">01</span>Destination</a></li>
+     <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2"  href="Crew.html"><span aria-hidden="true">02</span>Crew</a></li>
+     <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2"  href="Technology.html"><span aria-hidden="true">03</span>Technology</a></li>
+    </ul>
+  </nav>
+</header>
+
+<h1 class="title"><span>00</span>PICK YOUR DESTINATION</h1>
+<div class="container-Desti flex">
+  
+  <img id="myImage" src="assets/destination/image-moon.png" alt="moon" >
+  <div class="content-disti flex">
+    <ul class="header-desti flex">
+      <li onclick="changeMoon()">Moon</li>
+      <li onclick="changeMars()">Mars</li>
+      <li onclick="changeEuropa()">Europa</li>
+      <li onclick="changeTitan()">Titan</li>
+      
+    </ul>
+    <h1 id="myHeading">MOON</h1>
+    <p id="myParagraph">The Moon is Earth's only natural satellite. It is the fifth largest Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, It is the fifth largest Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, sapiente.</p>
+    <hr class="line-2">
+    
+   <table>
+    <tr>
+      <td>Distance</td>
+      <td id="myAltitude" > 384,400 kilometers</td>
+    </tr>
+    <tr>
+      <td>Flight Time</td>
+      <td id="myDiameter">3 DAYS (72 hours)</td>
+    </tr>  
+   </table>
+
+
+  </div>
+</div>
+<div id="button-contact"></div>
+<!-- footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class=" text-center">
+        <p>&copy; 2023 <Span>SPACE</Span>. Created by <SPAN>IMAD EL KHALIDY</SPAN> .</p>
+      </div>
+      
+    </div>
+  </div>
+  
+</footer>
+
+
+<div id="contactPopup">
+  <form>
+    <button id="closeButton">X</button>
+    <h2>Contact Us</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+
+
+</body>
+</html>

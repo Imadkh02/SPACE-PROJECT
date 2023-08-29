@@ -1,0 +1,177 @@
+/* Global CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+}
+
+/* List Styles */
+ul, ol {
+  list-style: none;
+  color: aliceblue;
+}
+
+/* Body Styles */
+body {
+  overflow-x: hidden;
+  background-image: url(home/background-home-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* Content Styles */
+.content {
+  color: aliceblue;
+}
+
+.content span {
+  color: rgb(207, 207, 207);
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  letter-spacing: 0.2rem;
+}
+
+.content h1 {
+  font-size: 6rem;
+  color: #fff;
+  letter-spacing: 12px;
+}
+
+.content p {
+  color: rgb(207, 207, 207);
+  font-size: 14px;
+  font-family: sans-serif;
+  line-height: 25px;
+  width: 350px;
+  word-break: break-all;
+}
+
+/* Shadow Styles */
+.srcl {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.8rem;
+  color: #0e0c0c;
+  cursor: crosshair;
+}
+
+/* Primary Section Styles */
+.primary-section {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Shadow Hover Styles */
+.shadow {
+  width: 200px;
+  height: 200px;
+  background-color: #0e0c0c;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow:hover {
+  transform: scale(1.3);
+  transition: all .30s ease-out;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url(home/background-home-mobile.jpg);
+    background-size: cover;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .content p {
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  
+  .shadow {
+    margin: auto;
+  }
+  
+  .primary-section {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    background-image: url(home/background-home-tablet.jpg);
+  }
+  
+  header {
+    margin-bottom: 100px;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .content p {
+    font-size: 20px;
+    margin: auto;
+    margin-bottom: 40px;
+    width: 410px;
+  }
+  
+  .content span {
+    font-size: 20px;
+  }
+  
+  .content h1 {
+    font-size: 8rem;
+  }
+  
+  .shadow {
+    margin: auto;
+    width: 250px;
+    height: 250px;
+  }
+  
+  .primary-section {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  body {
+    background-image: url(home/background-home-desktop.jpg);
+  }
+  
+  .primary-section {
+    margin-top: 150px;
+    justify-content: space-around;
+    margin: auto;
+  }
+  
+  header {
+    margin-bottom: 150px;
+  }
+}
+
